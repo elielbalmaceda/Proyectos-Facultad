@@ -1,10 +1,12 @@
 package com.tutorial.crud.dto;
 
-import javax.validation.constraints.Min;
+//No funciona esta anotacion y tampoco la importacion
+//Queda solucionar problema 18/8
+@NotBlank
 
 public class ProductoDto {
 
-    @NotBlank
+    
     private String nombre;
     private float precio;
  
