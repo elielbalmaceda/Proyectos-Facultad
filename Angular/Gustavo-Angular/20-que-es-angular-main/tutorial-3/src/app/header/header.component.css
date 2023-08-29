@@ -1,0 +1,27 @@
+/* Para la div que contiene el header. */
+.header {
+  width: 100%;
+  background-color: aquamarine;
+  border-bottom: 1px solid #000000;
+}
+
+.logo {
+  height: 2rem;
+}
+
+/* Para la ul que contiene los ítems del menú. */
+.menu {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.menu li {
+  font-weight: 600;
+  padding: .5rem;
+  text-align: center;
+}

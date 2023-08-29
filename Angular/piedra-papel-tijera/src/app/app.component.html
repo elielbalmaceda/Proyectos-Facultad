@@ -1,0 +1,12 @@
+<h1>Piedra, papel, tijera</h1>
+
+<div *ngIf="!resultado">
+  <p>Elige una opción:</p>
+  <button (click)="jugar('piedra')">Piedra</button>
+  <button (click)="jugar('papel')">Papel</button>
+  <button (click)="jugar('tijera')">Tijera</button>
+</div>
+
+<div *ngIf="resultado">
+  <h2>{{ resultado }}</h2>
+  <button (click)="reiniciarJuego()">Jugar de nuevo</button>

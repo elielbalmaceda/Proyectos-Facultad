@@ -1,0 +1,57 @@
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/:host
+https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
+
+Establece que este estilo se aplica a todo el subárbol del DOM
+que nace en este elemento y organiza todos los elementos
+en él contenidos.
+*/
+:host {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: block;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 1rem;
+}
+
+.divider {
+    border-top: solid 1px rgb(12, 8, 0);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .1rem;
+    padding-left: 0rem;
+    padding-bottom: 1rem;
+}
+
+.card {
+    margin: auto;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.title-item {
+    font-size: 1rem;
+    font-weight: 2rem;
+}
+
+.favorite-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.favorite-list li {
+    padding: 1rem;
+}
+
+.mini-image {
+    width: 5rem;
+    height: auto;
+}

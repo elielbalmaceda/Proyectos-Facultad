@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SimpleApplication<simple>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "tup.simple.SimpleApplication",
+            "projectName": "simple",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
