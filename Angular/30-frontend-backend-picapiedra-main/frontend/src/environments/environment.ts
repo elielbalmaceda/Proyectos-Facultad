@@ -1,16 +1,16 @@
-// This file can be replaced during build by using the `fileReplacements` array.
+//Este archivo se puede reemplazar durante la compilación usando la matriz `fileReplacements`.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+// La lista de reemplazos de archivos se puede encontrar en `angular.json`.
 
 export const environment = {
   production: false
 };
 
 /*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
+ * Para una depuración más sencilla en el modo de desarrollo, puede importar el siguiente archivo
+ * para ignorar los marcos de pila de errores relacionados con la zona, como `zone.run`, `zoneDelegate.invokeTask`.
+ * Esta importación debe comentarse en modo producción porque tendrá un impacto negativo.
+ * sobre el rendimiento si se produce un error.
  */
+
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
