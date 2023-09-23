@@ -1,0 +1,17 @@
+.primerComentario{
+    color: blue;
+
+}
+p{
+    font-size: 50px; /*Cambiar tamaño de fuente*/
+}
+
+h2{
+    font-size: 40px;
+    color: darkgoldenrod;
+}
+
+.segundaNoticia{
+    color: brown;
+    font-size: 70px;
+}

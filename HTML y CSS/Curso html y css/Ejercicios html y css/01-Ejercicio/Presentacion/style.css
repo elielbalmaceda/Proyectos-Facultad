@@ -1,0 +1,44 @@
+body{
+    font-family: 'Poppins' , sans-serif;
+    background-color: black;
+}
+
+.nombre{
+    font-size: 24px;
+    color: black; /* Color del texto del nombre */
+    
+    /*Animacion*/
+    animation-name: animacionNombre;
+    animation-duration: 3s;
+}
+.barra-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkorange;
+    padding: 5px 5px; /* Ajusta el espaciado según tus necesidades */
+}
+.logo{
+    max-width: 50%;
+    
+}
+.mi-enunciado{
+    color: white;
+    font-size: 15px;
+}
+
+.imagen{
+    height:350px;
+    margin-left: 800px; /* Mueve la imagen 50px hacia la derecha */
+    margin-top: 20px; /* Mueve la imagen 20px hacia abajo */
+
+}
+
+@keyframes animacionNombre {
+0%{
+    background-color: darkorange;
+}
+100%{
+    background-color: darkorange;
+}
+}
