@@ -1,0 +1,19 @@
+.toolbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #051630;
+    color: #ef952a;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 27px;
+  }
+
+  .titulo{
+    font-size: 20px;
+  }
