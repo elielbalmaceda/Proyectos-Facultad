@@ -16,6 +16,6 @@ export class AppComponent {
   }
 
   Nuevo(){
-    console.log('click sobre nuevo');
+    this.router.navigate(['add'])
   }
 }
