@@ -1,15 +1,19 @@
 <div class="body">
     <div class="login">
-      <img class="logo" src="/assets/img/coop.png">
-      <p>Login</p>
-      <mat-form-field>
-        <mat-label class="ancho">Usuario</mat-label>
-        <input matInput autocomplete="off">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label class="ancho">Contraseña</mat-label>
-        <input matInput autocomplete="off">
-      </mat-form-field>
+      <form [formGroup]="form" (ngSubmit)="ingresar()">
+        <img class="logo" src="/assets/img/coop.png">
+        <h1>Acceso</h1>
+        <mat-form-field class="ancho" appearance="fill">
+          <mat-label >Usuario</mat-label>
+          <input type="text" matInput autocomplete="off" formControlName="usuario">
+        </mat-form-field>
+        <mat-form-field class="ancho" appearance="fill">
+          <mat-label >Contraseña</mat-label>
+          <input type="password" autocomplete="off" formControlName="password">
+        </mat-form-field>
+        <br>
+        <button type="submit" class="ancho button" mat-raised-button color="primary">Ingresar</button>
+      </form>
     </div>
 </div>
 

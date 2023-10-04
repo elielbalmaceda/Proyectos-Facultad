@@ -1,0 +1,1 @@
+{"ast":null,"code":"export {};","map":{"version":3,"names":[],"sources":["C:\\Users\\eliel\\OneDrive\\Escritorio\\Proyectos\\Proyectos-Facultad\\Back-Front CMP\\ejemplo01\\src\\app\\app.component.ts"],"sourcesContent":["import{Router} from '@angular/router'\n\n\n"],"mappings":""},"metadata":{},"sourceType":"module","externalDependencies":[]}

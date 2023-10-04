@@ -16,5 +16,8 @@
 }
 
 .ancho{
-    width: 70px;
+    width: 80%;
+}
+.button{
+    height: 50px;
 }
