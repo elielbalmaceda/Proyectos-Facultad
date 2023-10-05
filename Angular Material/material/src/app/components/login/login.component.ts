@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup
   loading =false //Funciona false para que me aparezca despues de completar el formulario de logueo
 
-  constructor(private fb:FormBuilder, private _snackBar: MatSnackBar) { 
+  constructor(private fb:FormBuilder, private _snackBar: MatSnackBar, private router: Router) { 
     this.form =this.fb.group({
       usuario: ['', Validators.required],
       password: ['', Validators.required]
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
     const usuario = this.form.value.usuario
     const password = this.form.value.password
 
-    if(usuario == 'ebalmaceda' && password == 'Clavenueva1'){
+    if(usuario == 'ebalmaceda' && password == 'Clavenueva1'){ //Si el usuario pone ese usuario y contraseña ingresa
+      
       //Redireccionamos al dashboard
       this.fakeLoading();
     } else{
@@ -44,12 +46,12 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  fakeLoading(){
+    //Una vez que ingresa le aparece el sppiner, cargando
+  fakeLoading(){ 
     this.loading = true;
     setTimeout(() => {
 
-    //Redireccionamos al dashboard
-      this.loading = false;
+    this.router.navigate(['dashboard']);
     },1500);
     }
   
