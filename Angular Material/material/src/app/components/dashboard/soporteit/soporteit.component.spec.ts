@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NadvarComponent } from './nadvar.component';
+import { UsuariosComponent } from './soporteit.component';
 
-describe('NadvarComponent', () => {
-  let component: NadvarComponent;
-  let fixture: ComponentFixture<NadvarComponent>;
+describe('UsuariosComponent', () => {
+  let component: UsuariosComponent;
+  let fixture: ComponentFixture<UsuariosComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NadvarComponent]
+      declarations: [UsuariosComponent]
     });
-    fixture = TestBed.createComponent(NadvarComponent);
+    fixture = TestBed.createComponent(UsuariosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
