@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//Angular Material
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-
 //Componentes
 import { LoginComponent } from './components/login/login.component';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +16,9 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule,
-    MatFormFieldModule,
-    MatInputModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
