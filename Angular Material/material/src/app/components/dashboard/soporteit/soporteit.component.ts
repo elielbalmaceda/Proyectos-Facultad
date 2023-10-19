@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Usuario } from 'src/app/interfaces/usuario'
+import { SoporteitService } from 'src/app/services/soporteit.service';
 
 @Component({
   selector: 'app-soporteit',
@@ -9,28 +11,30 @@ import { Usuario } from 'src/app/interfaces/usuario'
   styleUrls: ['./soporteit.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  listaUsuario: Usuario[] = [
-    { NdeInventario: 1, elemento :"HDMI", lugar:"Soporte IT", cantidad:"3"},
-    { NdeInventario: 2, elemento :"Mouse", lugar:"Deposito", cantidad:"15"},
-    { NdeInventario: 3, elemento :"VGA a HDMI", lugar:"Soporte IT", cantidad:"5"},
-    { NdeInventario: 3, elemento :"Teclado", lugar:"Deposito", cantidad:"12"},
-    { NdeInventario: 2, elemento :"HDMI", lugar:"Soporte IT", cantidad:"3"},
-    { NdeInventario: 4, elemento :"Pila recargable", lugar:"Soporte IT", cantidad:"4"},
-  
-  ];
+
+  listaUsuario :Usuario[] = [];
 
   displayedColumns: string[] = ['N° de Inventario', 'Elemento', 'Lugar', 'Cantidad', 'Acciones'];
-  dataSource = new MatTableDataSource(this.listaUsuario);
+  
+  dataSource!:MatTableDataSource<any>;
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator; //Agregue el not NULL
+  @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() { }
+  constructor( private soporteitService: SoporteitService) { }
 
   ngOnInit(): void {
+    this.cargarElementos();
+  }
+
+  cargarElementos(){
+    this.listaUsuario = this.soporteitService.getSoporteit();
+    this.dataSource = new MatTableDataSource(this.listaUsuario);
   }
   
   ngAfterViewInit() {
-    this.dataSource.paginator=(this.paginator);
+    this.dataSource.paginator=(this.paginator);//No funciona ordenamiento
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(event: Event) {
