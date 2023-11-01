@@ -26,15 +26,14 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this.cargarElementos();
   }
-
-  cargarElementos(){
-    this.listaUsuario = this.soporteitService.getSoporteit();
-    this.dataSource = new MatTableDataSource(this.listaUsuario);
-  }
-  
   ngAfterViewInit() {
     this.dataSource.paginator=(this.paginator);//No funciona ordenamiento
     this.dataSource.sort = this.sort;
+  }
+
+  cargarElementos(){
+    this.listaUsuario = this.soporteitService.getUsuario();
+    this.dataSource = new MatTableDataSource(this.listaUsuario);
   }
 
   applyFilter(event: Event) {

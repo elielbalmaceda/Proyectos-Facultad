@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,10 +16,13 @@ export class SoporteitService {
     { NdeInventario: 4, elemento :"Pila recargable", lugar:"Soporte IT", cantidad:"4"},
     { NdeInventario: 5, elemento :"Cable Schuko", lugar:"Soporte IT", cantidad:"7"},
     { NdeInventario: 6, elemento :"Monitor Samsung", lugar:"Deposito", cantidad:"10"},
+    { NdeInventario: 7, elemento :"Puntero", lugar:"Soporte it", cantidad:"5"}
   ];
+  constructor() { }
+  
   getSoporteit: any;
   getUsuario(){
     return this.listaUsuario.slice
   }
-  constructor() { }
+  
 }

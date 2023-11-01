@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UsuariosComponent } from './soporteit.component';
 
 describe('UsuariosComponent', () => {
