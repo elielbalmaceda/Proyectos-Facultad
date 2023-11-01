@@ -1,0 +1,52 @@
+<div class="conteiner">
+    <mat-toolbar>
+        <span>Agregar elemento</span> 
+    </mat-toolbar>
+    <mat-card>
+        <form [formGroup]="form" (ngSubmit)="agregarElemento()">
+            <br>
+            <mat-grid-list cols="4" rowHeight="70px">
+                <mat-grid-tile [colspan] ="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>NdeInventario</mat-label>
+                        <input matInput autocomplete="on" formControlName="NdeInventario">
+                      </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan] ="3" [rowspan]="5">
+                    <img src="./assets/img/coop.png" widht="250" height="250">
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan] ="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Elemento</mat-label>
+                        <input matInput formControlName="elemento">
+                      </mat-form-field>
+                </mat-grid-tile>
+        
+                <mat-grid-tile [colspan] ="1" [rowspan]="1" >
+                    <mat-form-field  class="ancho">
+                        <mat-label>Lugar</mat-label>
+                        <mat-select formControlName="lugar">
+                          <mat-option *ngFor="let item of lugar" [value]="item">
+                            {{item}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan] ="1" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>Cantidad</mat-label>
+                        <input matInput formControlName="cantidad">
+                      </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan] ="1" [rowspan]="1" >
+                    <button mat-raised-button style="margin-right: 20px;">Volver</button>
+                    <button type= "submit" [disabled]="form.invalid" mat-raised-button color="primary">Agregar</button>
+                </mat-grid-tile>
+          </mat-grid-list>
+        </form>
+    </mat-card>
+</div>
