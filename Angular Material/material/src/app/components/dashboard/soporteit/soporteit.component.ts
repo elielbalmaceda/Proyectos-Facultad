@@ -32,7 +32,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   cargarElementos(){
-    this.listaUsuario = this.soporteitService.getUsuario();
+    this.listaUsuario = this.soporteitService.getSoporteit();
     this.dataSource = new MatTableDataSource(this.listaUsuario);
   }
 
