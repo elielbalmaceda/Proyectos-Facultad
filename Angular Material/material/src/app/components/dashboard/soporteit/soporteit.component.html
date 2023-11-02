@@ -10,8 +10,8 @@
         <input matInput (keyup)="applyFilter($event)" placeholder="Buscar elemento" #input autocomplete="on">
       </mat-form-field>
     <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort> <!--Ordenamiento no funciona-->>
-    <ng-container matColumnDef="N° de Inventario">
+      <table mat-table [dataSource]="dataSource" matSort> <!--Ordenamiento no funciona-->>
+    <ng-container matColumnDef="N_de_Inventario">
       <th mat-header-cell *matHeaderCellDef mat-sort-header > N° de Inventario </th> <!--Aca deberia poner cantidad o numero de inventario-->
       <td mat-cell *matCellDef="let element"> {{element.NdeInventario}} </td>
     </ng-container>

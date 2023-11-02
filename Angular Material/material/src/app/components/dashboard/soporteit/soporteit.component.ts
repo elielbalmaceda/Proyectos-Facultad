@@ -13,7 +13,6 @@ import { SoporteitService } from 'src/app/services/soporteit.service';
 })
 export class UsuariosComponent implements OnInit {
 
-
   listaUsuario : Usuario[] = [];
 
   displayedColumns: string[] = ['N° de Inventario', 'Elemento', 'Lugar', 'Cantidad', 'Acciones'];
@@ -22,16 +21,17 @@ export class UsuariosComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator; //Agregue el not NULL
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor( private soporteitService: SoporteitService, private _snackBar: MatSnackBar) { }
+  constructor( private soporteitService: SoporteitService,
+                 private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.cargarElementos();
   }
   ngAfterViewInit() {
-    this.dataSource.paginator=(this.paginator);//No funciona ordenamiento
+    this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-
+  
   cargarElementos(){
     this.listaUsuario = this.soporteitService.getSoporteit();
     this.dataSource = new MatTableDataSource(this.listaUsuario);

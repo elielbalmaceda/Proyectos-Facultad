@@ -5,6 +5,9 @@ import { Usuario } from '../interfaces/usuario';
     providedIn: 'root'
   })
   export class SoporteitService {
+  getSoporteitService(): Usuario[] {
+    throw new Error('Method not implemented.');
+  }
 
     listaUsuario: Usuario[] = [
         { NdeInventario: 1, elemento :"HDMI", lugar:"Soporte IT", cantidad:"3"},
