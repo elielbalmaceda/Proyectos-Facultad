@@ -7,7 +7,8 @@ import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NadvarComponent } from './navbar/navbar.component';
 import { UsuariosComponent } from './soporteit/soporteit.component'; 
-import { ReportesComponent } from './reportes/reportes.component'; //Importe modulos de material
+import { ReportesComponent } from './reportes/reportes.component';
+import { CrearElementoComponent } from './soporteit/crear-elemento/crear-elemento.component'; //Importe modulos de material
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReportesComponent } from './reportes/reportes.component'; //Importe mod
     InicioComponent,
     NadvarComponent,
     UsuariosComponent,
-    ReportesComponent
+    ReportesComponent,
+    CrearElementoComponent
   ],
   imports: [
     CommonModule,
