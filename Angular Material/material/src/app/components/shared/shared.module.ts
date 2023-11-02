@@ -18,13 +18,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-<<<<<<< HEAD
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
-=======
 
->>>>>>> 8801c8445a607643e6bfd1f9651fda04cf9da8e4
 
 
 @NgModule({
@@ -44,14 +41,11 @@ import {MatSelectModule} from '@angular/material/select';
     MatTableModule,
     MatTooltipModule,
     MatPaginatorModule,
-<<<<<<< HEAD
     MatSortModule,
     MatCardModule,
     MatGridListModule,
     MatSelectModule
-=======
-    MatSortModule
->>>>>>> 8801c8445a607643e6bfd1f9651fda04cf9da8e4
+
   ],
 
   exports:[
@@ -69,14 +63,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatTableModule,
     MatTooltipModule,
     MatPaginatorModule,
-<<<<<<< HEAD
     MatSortModule,
     MatCardModule,
     MatGridListModule,
     MatSelectModule
-=======
-    MatSortModule
->>>>>>> 8801c8445a607643e6bfd1f9651fda04cf9da8e4
   ],
 
 })
