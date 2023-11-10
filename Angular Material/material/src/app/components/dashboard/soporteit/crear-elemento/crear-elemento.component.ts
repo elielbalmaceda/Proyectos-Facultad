@@ -22,12 +22,12 @@ export class CrearElementoComponent {
       lugar: ['' , Validators.required],
       cantidad: ['' , Validators.required],
     })
-  }
-ngOnInit():void{
+  } 
+    ngOnInit():void{
 
-}
-agregarElemento(){
-  console.log(this.form);
+    }
+  agregarElemento(){
+    console.log(this.form);
   
     const user: Usuario ={                        //Tenia error, porque lo dejaba fuera de la funcion agregarElemento()
     NdeInventario:this.form.value.NdeInventario,
@@ -40,7 +40,7 @@ agregarElemento(){
 
     this.soporteitService.agregarElemento(user);
     this.router.navigate(['/dashboard/soporteit']); //Asi puedo agregar un elemento y me riderecciona a la pagina donde tengo la lista de elementos
-}
+  }
 
 }
  

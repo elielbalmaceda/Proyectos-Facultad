@@ -5,10 +5,9 @@ import { Usuario } from '../interfaces/usuario';
     providedIn: 'root'
   })
   export class SoporteitService {
-  getSoporteitService(): Usuario[] {
+  getElemento(): Usuario[] {
     throw new Error('Method not implemented.');
   }
-
     listaUsuario: Usuario[] = [
         { NdeInventario: 1, elemento :"HDMI", lugar:"Soporte IT", cantidad:"3"},
         { NdeInventario: 2, elemento :"Mouse", lugar:"Deposito", cantidad:"15"},
@@ -22,12 +21,12 @@ import { Usuario } from '../interfaces/usuario';
       constructor() { }
       
       getSoporteit: any; //??????
-      getUsuario(){
+      getSoporteitService(){
         return this.listaUsuario.slice();
       }
       
-      eliminarUsuario(index : number){
-        this.listaUsuario.splice(index, 1);
+      eliminarUsuario(index : number){    //Con este metodo podemos eliminar un elemento
+        this.listaUsuario.splice(index, 1); 
       }
 
       agregarElemento(Usuario: Usuario){
