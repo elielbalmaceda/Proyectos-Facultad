@@ -7,6 +7,7 @@ import { Elementos } from '../elementos';
   styleUrls: ['./lista-elementos.component.css']
 })
 export class ListaElementosComponent {
+[x: string]: any;
 
   elementos: Elementos[];
 
